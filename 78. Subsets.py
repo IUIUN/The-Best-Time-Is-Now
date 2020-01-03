@@ -10,4 +10,14 @@ class Solution:
             print(res)
              
         
-       
+       //
+    
+    def subsets(self, nums):
+        
+        nums.sort()
+        output = [[]]
+        
+        for num in nums:
+            output.extend([subset + [num] for subset in output])
+            
+        return output
