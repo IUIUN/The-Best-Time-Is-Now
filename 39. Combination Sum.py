@@ -20,13 +20,13 @@ class Solution:
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         res = []
-        self.backtracking(candidates, target, intermediate, start)
+        self.backtracking(sorted(candidates), target, [], 0, res)
         return res
-    def backtracking(self, nums, target, intermediate, start):
+    def backtracking(self, nums, target, intermediate, start, res):
         if target == 0:
-            res.append(intermediate)
-        while start <= len(nums) and nums[start] <= target:
+            res.append(list(intermediate))
+        while start < len(nums) and nums[start] <= target:
             intermediate.append(nums[start])
-            self.backtracking(nums, target - nums[start], intermediate, start)
+            self.backtracking(nums, target - nums[start], intermediate, start, res)
             intermediate.pop()
             start += 1
