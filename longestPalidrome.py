@@ -31,5 +31,13 @@ def helper(s, l, r):
         r += 1
     return s[l + 1: r]
 if __name__ == "__main__":
-    s = "babadababbabadababbabadababbabadababbabadababbabadaba"
-    print(longestPalindrome(s))
+    s1 = "babadababbabadababbabadababbabadababbabadababbabadaba"
+    s2 = " "
+    s3 = "aba"
+    s4 = "00"
+    s5 = ",0,0,"
+    print(longestPalindrome(s1))
+    print(longestPalindrome(s2))
+    print(longestPalindrome(s3))
+    print(longestPalindrome(s4))
+    print(longestPalindrome(s5))
